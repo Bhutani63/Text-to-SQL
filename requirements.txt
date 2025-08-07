@@ -1,0 +1,4 @@
+streamlit
+google-generativeai
+python-dotenv
+mysql-connector-python #As am using mysql workbench which is loacally installed
