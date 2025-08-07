@@ -7,10 +7,10 @@ load_dotenv()
 #  Connect to your local MySQL server
 def get_connection():
     connection=mysql.connector.connect(
-        host="localhost",
-        user="root",       #  Replace with your MySQL username
-        password="pass123",   #  Replace with your MySQL password
-        database="students"    # Replace with your database name (must already exist)
+        host= os.getenv("MYSQL_HOST"),
+        user=os.getenv("MYSQL_USER"),       #  Replace with your MySQL username
+        password=os.getenv("MYSQL_PASSWORD"),   #  Replace with your MySQL password
+        database=os.getenv("MYSQL_DATABASE")    # Replace with your database name (must already exist)
     )
     return connection
 
